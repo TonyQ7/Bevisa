@@ -1,4 +1,4 @@
-import { SectionWrapper, SectionHeading, Badge, IconBox } from './ui';
+import { SectionWrapper, SectionHeading } from './ui';
 import { useInView } from '../hooks/useInView';
 
 /* ─── Inline SVG Icons ─── */
@@ -139,7 +139,7 @@ function PassportCard() {
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              {/* Helm logo mark */}
+              {/* Praxis logo mark */}
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-electric-500 to-teal-500 flex items-center justify-center">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <polygon points="12 2 2 7 12 12 22 7 12 2" />
@@ -149,7 +149,7 @@ function PassportCard() {
               </div>
               <div>
                 <span className="block text-[10px] font-bold tracking-[0.2em] text-slate-400 uppercase">
-                  Helm
+                  Praxis
                 </span>
                 <span className="block text-xs font-bold tracking-[0.15em] text-white uppercase">
                   AI Work Passport
@@ -286,7 +286,7 @@ export default function Passport() {
         id="passport"
         badge="AI Work Passport"
         title="The Next Enterprise Credential"
-        subtitle="A resume says what someone claims they can do. A certificate says they sat through content. Helm proves what they can safely do with AI."
+        subtitle="A resume says what someone claims they can do. A certificate says they sat through content. Praxis proves what they can safely do with AI."
         dark
       />
 

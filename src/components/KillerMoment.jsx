@@ -1,4 +1,4 @@
-import { SectionWrapper, SectionHeading, Badge } from './ui';
+import { SectionWrapper, SectionHeading } from './ui';
 import { useInView } from '../hooks/useInView';
 
 const outcomes = [
@@ -139,7 +139,7 @@ function DecisionDivider({ isVisible }) {
       <div className="flex items-center gap-2 rounded-full border border-electric-500/30 bg-electric-500/10 px-4 py-1.5">
         <span className="h-1.5 w-1.5 rounded-full bg-electric-400 animate-pulse" />
         <span className="text-xs font-bold uppercase tracking-widest text-electric-300 font-mono">
-          Helm Decision
+          Praxis Decision
         </span>
       </div>
       <div className="h-px flex-1 bg-gradient-to-r from-transparent via-electric-500/40 to-transparent" />
@@ -147,7 +147,7 @@ function DecisionDivider({ isVisible }) {
   );
 }
 
-function OutcomeCard({ outcome, index, isVisible }) {
+function OutcomeCard({ outcome, index }) {
   const { status, bgClass, glowClass, labelClass, dotClass, iconBg, description, selected, icon } = outcome;
 
   return (
@@ -221,7 +221,7 @@ export default function KillerMoment() {
             <span className="h-2.5 w-2.5 rounded-full bg-amber-500/60" />
             <span className="h-2.5 w-2.5 rounded-full bg-emerald-500/60" />
             <span className="ml-4 text-[11px] font-mono text-slate-500 tracking-wide">
-              helm / workforce-readiness / decision-engine
+              praxis / workforce-readiness / decision-engine
             </span>
           </div>
 

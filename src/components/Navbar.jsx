@@ -11,12 +11,12 @@ const NAV_LINKS = [
   { label: 'Contact', href: '#contact' },
 ];
 
-function HelmLogo() {
+function PraxisLogo() {
   return (
     <a
       href="#"
       className="flex items-center gap-2.5 group"
-      aria-label="Helm — Back to top"
+      aria-label="Praxis — Back to top"
     >
       {/* Gradient H icon */}
       <svg
@@ -29,12 +29,12 @@ function HelmLogo() {
         className="shrink-0 transition-transform duration-300 group-hover:scale-105"
       >
         <defs>
-          <linearGradient id="helm-logo-gradient" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+          <linearGradient id="praxis-logo-gradient" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
             <stop stopColor="var(--color-electric-500)" />
             <stop offset="1" stopColor="var(--color-teal-500)" />
           </linearGradient>
         </defs>
-        <rect width="36" height="36" rx="10" fill="url(#helm-logo-gradient)" />
+        <rect width="36" height="36" rx="10" fill="url(#praxis-logo-gradient)" />
         {/* H letter */}
         <path
           d="M10 8h4v8h8V8h4v20h-4v-8H14v8h-4V8z"
@@ -43,14 +43,16 @@ function HelmLogo() {
       </svg>
 
       <span className="text-xl font-extrabold tracking-tight text-navy-900 transition-colors duration-300 group-hover:text-navy-700">
-        HELM
+        PRAXIS
       </span>
     </a>
   );
 }
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(() =>
+    typeof window !== 'undefined' ? window.scrollY > 16 : false
+  );
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
@@ -78,7 +80,6 @@ export default function Navbar() {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // initial check
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
@@ -113,7 +114,7 @@ export default function Navbar() {
         aria-label="Primary navigation"
       >
         {/* ── Logo ──────────────────────────────────────────────────── */}
-        <HelmLogo />
+        <PraxisLogo />
 
         {/* ── Desktop links ─────────────────────────────────────────── */}
         <ul className="hidden xl:flex items-center gap-1" role="menubar">

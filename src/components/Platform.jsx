@@ -375,7 +375,7 @@ export default function Platform() {
         id="platform"
         badge="Platform"
         title="From Readiness to Workforce Infrastructure"
-        subtitle="Helm starts where budgets are already forming and expands into the operating system for AI workforce deployment."
+        subtitle="Praxis starts where budgets are already forming and expands into the operating system for AI workforce deployment."
       />
 
       {/* ── Expansion Timeline ────────────────────────────────── */}

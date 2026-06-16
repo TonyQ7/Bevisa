@@ -1,5 +1,3 @@
-import { Button } from './ui';
-
 export default function Footer() {
   return (
     <footer className="bg-navy-950 text-white border-t border-white/10 pt-16 pb-12 relative overflow-hidden">
@@ -17,7 +15,7 @@ export default function Footer() {
                 <span className="font-sans font-extrabold text-white text-base tracking-tighter">H</span>
               </div>
               <span className="text-xl font-bold tracking-tight text-white group-hover:text-electric-300 transition-colors">
-                HELM
+                PRAXIS
               </span>
             </a>
             
@@ -84,9 +82,9 @@ export default function Footer() {
 
         {/* Footer Bottom */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-          <p>© 2025 Helm. All rights reserved.</p>
+          <p>© 2025 Praxis. All rights reserved.</p>
           <div className="flex gap-6">
-            <span>Contact: <a href="mailto:hello@helm.work" className="text-slate-400 hover:text-white underline">hello@helm.work</a></span>
+            <span>Contact: <a href="mailto:hello@praxis.work" className="text-slate-400 hover:text-white underline">hello@praxis.work</a></span>
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>

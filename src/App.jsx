@@ -10,7 +10,7 @@ import HowItWorks from './components/HowItWorks'
 import KillerMoment from './components/KillerMoment'
 import UseCases from './components/UseCases'
 import Platform from './components/Platform'
-import WhatHelmOwns from './components/WhatHelmOwns'
+import WhatPraxisOwns from './components/WhatPraxisOwns'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -30,7 +30,7 @@ function App() {
         <KillerMoment />
         <UseCases />
         <Platform />
-        <WhatHelmOwns />
+        <WhatPraxisOwns />
         <Contact />
       </main>
       <Footer />

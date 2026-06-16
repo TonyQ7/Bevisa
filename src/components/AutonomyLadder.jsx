@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SectionWrapper, SectionHeading, Badge } from './ui';
+import { SectionWrapper, SectionHeading } from './ui';
 import { useInView } from '../hooks/useInView';
 
 const levels = [
@@ -339,7 +339,7 @@ export default function AutonomyLadder() {
         <p className="text-sm text-slate-500 max-w-xl mx-auto">
           Each level is{' '}
           <span className="font-semibold text-navy-800">earned through evidence</span>,
-          not assumed from tool access. Helm certifies where each professional
+          not assumed from tool access. Praxis certifies where each professional
           stands — and where they're ready to go.
         </p>
       </div>

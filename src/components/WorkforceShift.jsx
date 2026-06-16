@@ -206,7 +206,7 @@ export default function WorkforceShift() {
       {/* Bottom callout */}
       <div className="mt-16 text-center">
         <p className="text-sm text-slate-500 max-w-xl mx-auto">
-          Helm certifies professionals for the <span className="font-semibold text-navy-800">third era</span> — turning AI-curious employees into verified AI-native operators.
+          Praxis certifies professionals for the <span className="font-semibold text-navy-800">third era</span> — turning AI-curious employees into verified AI-native operators.
         </p>
       </div>
     </SectionWrapper>

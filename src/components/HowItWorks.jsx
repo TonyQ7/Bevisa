@@ -1,4 +1,4 @@
-import { SectionWrapper, SectionHeading, Card, IconBox, Badge } from './ui';
+import { SectionWrapper, SectionHeading, Card, IconBox } from './ui';
 import { useInView } from '../hooks/useInView';
 
 /* ─── Icons ─────────────────────────────────────────────────────── */
@@ -76,7 +76,7 @@ const steps = [
     number: '02',
     title: 'Readiness Scorecard',
     icon: ClipboardCheckIcon,
-    description: 'Helm scores judgment, verification, escalation, and domain fit.',
+    description: 'Praxis scores judgment, verification, escalation, and domain fit.',
     color: 'teal',
   },
   {

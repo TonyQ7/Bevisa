@@ -97,7 +97,7 @@ function PassportCard() {
         {/* Bottom accent */}
         <div className="px-6 md:px-8 py-3 bg-slate-50 border-t border-slate-100">
           <div className="flex items-center justify-between">
-            <span className="text-[10px] font-medium text-slate-400 uppercase tracking-widest">Helm Protocol v2.1</span>
+            <span className="text-[10px] font-medium text-slate-400 uppercase tracking-widest">Praxis Protocol v2.1</span>
             <div className="flex items-center gap-1">
               <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
               <span className="text-[10px] font-medium text-slate-400">Live</span>
@@ -155,7 +155,7 @@ export default function Hero() {
 
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed mb-10 max-w-xl">
-              Helm is the AI workforce readiness infrastructure that proves
+              Praxis is the AI workforce readiness infrastructure that proves
               which humans can safely operate AI-agent workflows — at what
               autonomy level, in which work context, with verified evidence.
             </p>

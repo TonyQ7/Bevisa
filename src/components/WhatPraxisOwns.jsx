@@ -1,4 +1,4 @@
-import { SectionWrapper, SectionHeading, Badge, IconBox } from './ui';
+import { SectionWrapper, SectionHeading } from './ui';
 import { useInView } from '../hooks/useInView';
 
 /* ── Icon Components ── */
@@ -190,7 +190,7 @@ function IntegrationNote({ isVisible }) {
             <span className="text-slate-300 font-medium">compliance</span>,{' '}
             and other enterprise systems — but{' '}
             <span className="text-white font-semibold">
-              Helm is independently valuable
+              Praxis is independently valuable
             </span>.
           </p>
         </div>
@@ -201,11 +201,11 @@ function IntegrationNote({ isVisible }) {
 
 /* ── Main Section Component ── */
 
-export default function WhatHelmOwns() {
+export default function WhatPraxisOwns() {
   const [gridRef, gridVisible] = useInView({ threshold: 0.1 });
 
   return (
-    <SectionWrapper id="what-helm-owns" bg="gradient">
+    <SectionWrapper id="what-praxis-owns" bg="gradient">
       {/* Background texture */}
       <div className="absolute inset-0 z-0 opacity-[0.03]" aria-hidden="true">
         <div
@@ -222,10 +222,10 @@ export default function WhatHelmOwns() {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-electric-500/[0.04] blur-[120px] pointer-events-none" aria-hidden="true" />
 
       <SectionHeading
-        id="what-helm-owns"
+        id="what-praxis-owns"
         badge="Category"
-        title="What Helm Owns"
-        subtitle="The category does not depend on integrations. Helm is valuable because every AI-native enterprise needs a trusted way to license humans for digital labor."
+        title="What Praxis Owns"
+        subtitle="The category does not depend on integrations. Praxis is valuable because every AI-native enterprise needs a trusted way to license humans for digital labor."
         dark
       />
 

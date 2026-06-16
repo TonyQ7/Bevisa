@@ -67,7 +67,7 @@ const useCases = [
   {
     title: 'Graduate Programs & Internships',
     description:
-      'New talent entering AI-native roles needs verified readiness before enterprise deployment. Helm replaces guesswork with evidence.',
+      'New talent entering AI-native roles needs verified readiness before enterprise deployment. Praxis replaces guesswork with evidence.',
     icon: GraduationCapIcon,
     variant: 'electric',
     tag: 'Early Career',

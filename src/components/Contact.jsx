@@ -53,7 +53,7 @@ export default function Contact() {
       <SectionHeading
         badge="Get Started"
         title="The AI-Native Workforce Needs a Passport"
-        subtitle="Enterprises will need a way to know who is ready, at what autonomy level, in which work context. Start with Helm."
+        subtitle="Enterprises will need a way to know who is ready, at what autonomy level, in which work context. Start with Praxis."
         center={true}
       />
 
@@ -68,7 +68,7 @@ export default function Contact() {
               The future of work will not be defined by who knows AI. It will be defined by who can safely operate with AI.
             </p>
             <p className="text-lg text-slate-600 font-medium leading-relaxed">
-              Helm licenses humans for the age of digital labor.
+              Praxis licenses humans for the age of digital labor.
             </p>
 
             <div className="pt-6 border-t border-slate-100 space-y-4">
@@ -130,7 +130,7 @@ export default function Contact() {
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold text-navy-900">Request Received</h3>
                   <p className="text-slate-600 max-w-md mx-auto">
-                    Thank you, {formData.name}. One of our workforce architects will contact you shortly to schedule a customized demo of the Helm platform.
+                    Thank you, {formData.name}. One of our workforce architects will contact you shortly to schedule a customized demo of the Praxis platform.
                   </p>
                 </div>
                 <div className="pt-4">

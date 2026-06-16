@@ -1,4 +1,4 @@
-import { SectionWrapper, SectionHeading, Badge } from './ui';
+import { SectionWrapper, SectionHeading } from './ui';
 import { useInView } from '../hooks/useInView';
 
 const existingSystems = [
@@ -10,7 +10,7 @@ const existingSystems = [
   { label: 'HR Analytics', desc: 'Workforce metrics' },
 ];
 
-const helmCapabilities = [
+const praxisCapabilities = [
   { text: 'Which humans are ready', icon: '✓' },
   { text: 'At what autonomy level', icon: '◎' },
   { text: 'In which work context', icon: '⬡' },
@@ -71,7 +71,7 @@ function GapIndicator() {
   );
 }
 
-function HelmCard() {
+function PraxisCard() {
   const [ref, isVisible] = useInView({ threshold: 0.2 });
 
   return (
@@ -80,7 +80,7 @@ function HelmCard() {
       <div className="mb-4 flex items-center gap-2">
         <span className="h-2 w-2 rounded-full bg-electric-500 animate-pulse" />
         <span className="text-xs font-bold uppercase tracking-widest text-electric-500">
-          Helm
+          Praxis
         </span>
       </div>
 
@@ -101,7 +101,7 @@ function HelmCard() {
             </h4>
 
             <div className="space-y-3">
-              {helmCapabilities.map((cap, i) => (
+              {praxisCapabilities.map((cap, i) => (
                 <div
                   key={i}
                   className={`flex items-center gap-3 transition-all duration-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'}`}
@@ -158,7 +158,7 @@ function ConnectingArrows() {
         />
       </svg>
 
-      {/* Right arrow: Gap → Helm */}
+      {/* Right arrow: Gap → Praxis */}
       <svg
         className="absolute right-[31%] top-1/2 -translate-y-1/2"
         width="80" height="40"
@@ -238,8 +238,8 @@ export default function MissingLayer() {
           {/* ── Center: Gap ── */}
           <GapIndicator />
 
-          {/* ── Right: Helm ── */}
-          <HelmCard />
+          {/* ── Right: Praxis ── */}
+          <PraxisCard />
         </div>
       </div>
     </SectionWrapper>
