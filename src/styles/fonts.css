@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Familjen Grotesk';
+  font-style: normal;
+  font-display: optional;
+  font-weight: 600;
+  src: url('../../node_modules/@fontsource/familjen-grotesk/files/familjen-grotesk-latin-600-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Familjen Grotesk';
+  font-style: normal;
+  font-display: optional;
+  font-weight: 700;
+  src: url('../../node_modules/@fontsource/familjen-grotesk/files/familjen-grotesk-latin-700-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-display: optional;
+  font-weight: 400;
+  src: url('../../node_modules/@fontsource/instrument-sans/files/instrument-sans-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-display: optional;
+  font-weight: 500;
+  src: url('../../node_modules/@fontsource/instrument-sans/files/instrument-sans-latin-500-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Spline Sans Mono';
+  font-style: normal;
+  font-display: optional;
+  font-weight: 400;
+  src: url('../../node_modules/@fontsource/spline-sans-mono/files/spline-sans-mono-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Spline Sans Mono';
+  font-style: normal;
+  font-display: optional;
+  font-weight: 500;
+  src: url('../../node_modules/@fontsource/spline-sans-mono/files/spline-sans-mono-latin-500-normal.woff2') format('woff2');
+}

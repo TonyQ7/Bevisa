@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style>:root{--ink:#101B2D;--arkiv:#F2F4F1;--sigill:#1E7A5F;--graphite:#5A6472}.m{font-family:monospace;letter-spacing:2px}</style>
+  <rect width="800" height="500" fill="var(--ink)"/><rect x="112" y="86" width="576" height="326" fill="none" stroke="var(--graphite)"/><rect x="146" y="120" width="210" height="28" fill="var(--sigill)" opacity=".2"/><text x="158" y="139" class="m" font-size="11" fill="var(--sigill)">OWNER: QUALITY LEAD</text>
+  <g fill="var(--arkiv)" opacity=".75"><rect x="146" y="190" width="470" height="9"/><rect x="146" y="218" width="390" height="9"/><rect x="146" y="266" width="440" height="9"/><rect x="146" y="294" width="320" height="9"/></g><g fill="var(--sigill)"><rect x="630" y="183" width="40" height="24"/><rect x="550" y="211" width="40" height="24"/><rect x="600" y="259" width="40" height="24"/></g>
+  <text x="34" y="52" class="m" font-size="14" fill="var(--sigill)">04 · CITED DRAFT</text><text x="34" y="470" class="m" font-size="12" fill="var(--arkiv)" opacity=".45">NO SOURCE · NO CLAIM</text>
+</svg>

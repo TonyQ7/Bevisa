@@ -1,0 +1,207 @@
+import {
+  LEGAL_NOTICE,
+  PLANNED_CONTACT_EMAIL,
+  SOURCES,
+  type LocalizedCopy,
+} from './copy'
+
+export const SV_COPY: LocalizedCopy = {
+  locale: 'sv',
+  meta: {
+    title: 'Bevisa — Evidens- och compliance-OS för offentliga anbud',
+    description:
+      'Bevisa kopplar varje obligatoriskt krav till daterad, godkänd evidens — och vägrar formulera ett påstående som inte kan beläggas.',
+  },
+  common: {
+    skip: 'Hoppa till innehållet',
+    source: 'Källa',
+    pending: 'Konfiguration pågår',
+    copied: 'Kopierad',
+    copyEmail: 'Kopiera e-postadress',
+    externalLink: 'Öppnas i en ny flik',
+    languageLabel: 'Språk',
+    english: 'English',
+    swedish: 'Svenska',
+  },
+  nav: {
+    label: 'Huvudnavigering',
+    problem: 'Problemet',
+    process: 'Så fungerar det',
+    health: 'Evidenshälsa',
+    sovereignty: 'Suveränitet',
+    offer: 'Designpartner',
+    book: 'Boka ett discovery-samtal',
+    openMenu: 'Öppna navigering',
+    closeMenu: 'Stäng navigering',
+  },
+  hero: {
+    eyebrow: 'FÖR TEAM SOM LÄMNAR OFFENTLIGA ANBUD',
+    title: 'Vinn upphandlingen innan ni börjar skriva.',
+    body:
+      'Bevisa kopplar varje obligatoriskt krav till daterad, godkänd evidens — och vägrar formulera ett påstående som inte kan beläggas.',
+    book: 'Boka ett discovery-samtal',
+    sample: 'Hämta exempelrapporten',
+    scrollPrefix: 'SKALL-KRAV',
+    sceneDescription:
+      'Ett fält av godkända, utgående och saknade evidensobjekt som binds samman av spårbar härkomst.',
+    interactionHint: 'För pekaren genom evidensfältet',
+  },
+  problem: {
+    eyebrow: 'BEVISGLAPPET',
+    title: 'Det svåra är inte att skriva. Det är att bevisa.',
+    body:
+      'Certifikatet som gick ut förra tisdagen. Referensuppdraget som bara en kollega hittar. Skall-kravet som ingen kartlade. Anbudsteam tappar tid när bevis måste återskapas under deadline.',
+    stats: [
+      {
+        id: 'bidders',
+        value: '13 067',
+        label: 'unika företag lämnade anbud i svenska offentliga upphandlingar 2024',
+        sourceLabel: 'Upphandlingsmyndigheten, officiell statistik',
+        sourceUrl: SOURCES.bidders2024,
+      },
+      {
+        id: 'bids',
+        value: '71 128',
+        label: 'klassificerade anbud lämnades under 2024',
+        sourceLabel: 'Upphandlingsmyndigheten, officiell statistik',
+        sourceUrl: SOURCES.bidders2024,
+      },
+      {
+        id: 'complexity',
+        value: '1 av 5',
+        label: 'leverantörer anger komplexitet som skäl att inte lämna anbud',
+        sourceLabel: 'Upphandlingsmyndigheten, leverantörsenkät 2025',
+        sourceUrl: SOURCES.supplierSurvey2025,
+      },
+    ],
+    context:
+      'Svenska annonserade upphandlingar hade ett uppskattat värde på 982 miljarder kronor 2025.',
+    contextQualifier: 'Kontext för offentlig upphandling — inte Bevisas adresserbara marknad.',
+  },
+  pipeline: {
+    eyebrow: 'FRÅN DOKUMENT TILL BESLUT',
+    title: 'En evidenskedja. Fem kontrollerade steg.',
+    intro:
+      'En liveupphandling kommer in som dokument och lämnar som styrd kravmatris, redo för ett mänskligt beslut.',
+    steps: [
+      {
+        id: 'ingest',
+        number: '01',
+        title: 'Läs in',
+        body: 'Läs in en liveupphandling. Originaldokumentet förblir referenspunkten för varje extraherat krav.',
+        signal: 'FFU MOTTAGET · KÄLLA LÅST',
+      },
+      {
+        id: 'extract',
+        number: '02',
+        title: 'Extrahera',
+        body: 'Identifiera varje obligatoriskt krav. Oklarheter flaggas för granskning i stället för att gissas bort.',
+        signal: '147 KRAV · 1 GRANSKNINGSFLAGGA',
+      },
+      {
+        id: 'map',
+        number: '03',
+        title: 'Kartlägg',
+        body: 'Koppla varje krav till daterad, godkänd evidens. Krav utan träff förblir tydligt tomma.',
+        signal: 'HÄRKOMST VERIFIERAD · LUCKOR SYNLIGA',
+      },
+      {
+        id: 'draft',
+        number: '04',
+        title: 'Tilldela och formulera',
+        body: 'Tilldela varje lucka till en namngiven roll. Formulera endast från godkända källor, med citat på varje påstående.',
+        signal: 'ÄGARE TILLDELAD · KÄLLOR BIFOGADE',
+      },
+      {
+        id: 'approve',
+        number: '05',
+        title: 'Godkänn och exportera',
+        body: 'Anbudsansvarig granskar hela kravmatrisen och behåller slutlig beslutanderätt före Word- eller portalexport.',
+        signal: 'GODKÄND · MÄNSKLIG GRIND PASSERAD',
+      },
+    ],
+    sceneDescription:
+      'Ett upphandlingsdokument blir kravmarkörer, kopplas till evidens och ordnas i en kravmatris bakom en mänsklig godkännandegrind.',
+    requirementCount: '147 obligatoriska krav hittade',
+    ambiguous: 'OKLART — flaggat för mänsklig granskning',
+    owner: 'ÄGARE: KVALITETSANSVARIG',
+    draft: 'Det föreslagna leveransteamet upprätthåller ett dokumenterat kvalitetssystem',
+    citationOne: 'E-014',
+    citationTwo: 'CV-028',
+    approval: 'GODKÄND — mänskligt godkännande krävs för varje inlämning',
+    export: 'EXPORT · WORD / PORTAL',
+  },
+  health: {
+    eyebrow: 'EVIDENSHÄLSA',
+    title: 'Mellan upphandlingarna håller Bevisa vakt.',
+    body:
+      'Designpartnerskapet omfattar utgångsvarningar, ansvar för certifikatförnyelse och en måndagsöversikt — så att beredskapen inte nollställs efter varje anbud.',
+    filterLabel: 'Filtrera evidenshorisont',
+    filters: { all: 'All evidens', urgent: 'Nästa 90 dagar', quarter: 'Detta år' },
+    columns: { evidence: 'Evidens', owner: 'Ägare', status: 'Förnyelsehorisont' },
+    scoreLabel: 'Evidenshälsa',
+    digest: 'Måndagsöversikt · 3 åtgärder tilldelade',
+  },
+  sovereignty: {
+    eyebrow: 'DIGITAL SUVERÄNITET',
+    title: 'Era vinnande teman lämnar aldrig Europa.',
+    body:
+      'CV:n, referenser, finansiella uppgifter och tidigare svar är konkurrenstillgångar och personuppgifter. Varje designpartnermiljö specificeras för EU/EES-jurisdiktion, rollbaserad åtkomst, gallringskontroller och revisionsspår.',
+    commitment:
+      'Arkitekturen följer riktningen i Sveriges molnpolicy 2026: starkare kontroll över data, lägre beroende och praktiska exitvägar.',
+    badges: ['EU/EES-HOSTING', 'GDPR BY DESIGN', 'FULLSTÄNDIGT REVISIONSSPÅR'],
+    sourceLabel: 'Sveriges molnpolicy 2026',
+  },
+  stack: {
+    eyebrow: 'FUNGERAR MED ER STACK',
+    title: 'Vi ersätter inte era portaler. Vi rustar dem.',
+    body:
+      'SharePoint, Microsoft 365 och er godkända evidens matar det styrda lagret. Mercell, TendSign, Tendium, Word och Excel förblir där bevakning och inlämning sker.',
+    inputLabel: 'IN',
+    outputLabel: 'UT',
+    inputs: ['SharePoint / M365', 'CV · REFERENS · POLICY'],
+    outputs: ['Mercell · TendSign', 'Tendium · Word / Excel'],
+    evidence: 'ER EVIDENS',
+    center: 'EVIDENSLAGER',
+    conclusion: 'Bevakning och inlämning är lösta problem. Bevis är det inte.',
+  },
+  offer: {
+    eyebrow: 'DESIGNPARTNERS · SVERIGE',
+    title: 'Vi väljer ut tre designpartners.',
+    body:
+      'Använd en liveupphandling för att testa om styrd evidens kan korta ledtiden och förbättra kravutrymme. Skuggläge kommer först; er anbudsansvarige behåller slutlig beslutanderätt.',
+    terms: [
+      '8 veckor',
+      'En liveupphandling',
+      '45 000–75 000 SEK',
+      'Tillgodoräknas fullt mot år ett',
+      'Spårbarhet utlovas — aldrig vinster',
+    ],
+    qualifiersTitle: 'En stark matchning ser ut så här',
+    qualifiers: [
+      '8+ offentliga anbud per år',
+      'Anbudsfunktion med 2–10 personer',
+      'Evidens finns i Microsoft 365',
+      'Kan starta inom 60 dagar',
+    ],
+    book: 'Boka ett discovery-samtal',
+    bookingPending: 'Bokningslänken konfigureras före lansering.',
+    plannedEmail: PLANNED_CONTACT_EMAIL,
+    emailPending: 'Planerad adress — e-postleverans är ännu inte aktiv.',
+    report: 'Ladda ner exempelrapporten',
+    reportPending: 'Exempelrapporten tas fram före lansering.',
+    legal: LEGAL_NOTICE,
+  },
+  footer: {
+    tagline: 'Bevisa — Byggt i Stockholm.',
+    privacy: 'Inga spårningscookies. Endast integritetsvänlig analys.',
+    copyright: '© 2026 Bevisa',
+    legal: LEGAL_NOTICE,
+  },
+  notFound: {
+    eyebrow: '404 · POSTEN HITTADES INTE',
+    title: 'Evidensspåret slutar här.',
+    body: 'Den begärda sidan ingår inte i Bevisas arkiv.',
+    home: 'Tillbaka till Bevisa',
+  },
+}

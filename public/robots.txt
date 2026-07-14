@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tonyq7.github.io/Bevisa/sitemap.xml

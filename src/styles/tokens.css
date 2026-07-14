@@ -1,0 +1,28 @@
+:root {
+  --ink: #101b2d;
+  --ink-rgb: 16 27 45;
+  --arkiv: #f2f4f1;
+  --arkiv-rgb: 242 244 241;
+  --sigill: #1e7a5f;
+  --sigill-rgb: 30 122 95;
+  --sigill-ink: #17654f;
+  --sigill-hover: #17684f;
+  --expiry: #c8891a;
+  --expiry-rgb: 200 137 26;
+  --expiry-ink: #6f4900;
+  --saknas: #b23a31;
+  --saknas-rgb: 178 58 49;
+  --graphite: #5a6472;
+  --graphite-rgb: 90 100 114;
+  --paper-line: color-mix(in srgb, var(--graphite) 24%, transparent);
+  --ink-muted: #aeb8c5;
+  --ink-line: color-mix(in srgb, var(--arkiv) 18%, transparent);
+  --focus: #2d9c78;
+  --sigill-light: #82c9b2;
+  --space-section: clamp(5rem, 11vw, 10rem);
+  --page-gutter: clamp(1.1rem, 4vw, 4.5rem);
+  --max-content: 86rem;
+  --radius-sm: 0.25rem;
+  --nav-shadow: 0 0.75rem 2.5rem color-mix(in srgb, var(--ink) 28%, transparent);
+  --ease-institutional: cubic-bezier(0.65, 0, 0.35, 1);
+}

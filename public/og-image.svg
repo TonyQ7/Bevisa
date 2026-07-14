@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <style>:root{--ink:#101B2D;--arkiv:#F2F4F1;--sigill:#1E7A5F;--expiry:#C8891A;--saknas:#B23A31;--graphite:#5A6472}.mono{font-family:monospace;letter-spacing:3px}.display{font-family:Arial,sans-serif;font-weight:700;letter-spacing:-4px}</style>
+  <rect width="1200" height="630" fill="var(--ink)"/>
+  <g opacity=".12" stroke="var(--arkiv)">
+    <path d="M0 90H1200M0 180H1200M0 270H1200M0 360H1200M0 450H1200M0 540H1200"/>
+    <path d="M120 0V630M240 0V630M360 0V630M480 0V630M600 0V630M720 0V630M840 0V630M960 0V630M1080 0V630"/>
+  </g>
+  <text x="74" y="83" class="mono" font-size="18" fill="var(--sigill)">EVIDENCE &amp; COMPLIANCE OS</text>
+  <text x="72" y="205" class="display" font-size="86" fill="var(--arkiv)">Win before</text>
+  <text x="72" y="292" class="display" font-size="86" fill="var(--arkiv)">you write.</text>
+  <text x="76" y="362" font-family="Arial,sans-serif" font-size="25" fill="var(--arkiv)" opacity=".7">Every requirement. Dated evidence. Human approval.</text>
+  <g transform="translate(748 112)">
+    <g fill="none" stroke="var(--graphite)" opacity=".65">
+      <path d="M30 50L174 22L298 96L410 38M30 50L104 184L266 204L410 38M104 184L76 330L252 372L388 290M266 204L388 290"/>
+    </g>
+    <g fill="var(--sigill)"><circle cx="30" cy="50" r="8"/><circle cx="174" cy="22" r="7"/><circle cx="104" cy="184" r="9"/><circle cx="266" cy="204" r="8"/><circle cx="76" cy="330" r="7"/><circle cx="252" cy="372" r="9"/></g>
+    <circle cx="298" cy="96" r="8" fill="var(--expiry)"/><circle cx="410" cy="38" r="7" fill="var(--saknas)"/><circle cx="388" cy="290" r="8" fill="var(--sigill)"/>
+    <g transform="translate(140 230)">
+      <rect width="54" height="34" fill="var(--sigill)"/><rect x="62" width="54" height="34" fill="var(--sigill)"/><rect x="124" width="54" height="34" fill="var(--expiry)"/>
+      <rect y="42" width="54" height="34" fill="var(--sigill)"/><rect x="62" y="42" width="54" height="34" fill="var(--saknas)"/><rect x="124" y="42" width="54" height="34" fill="var(--sigill)"/>
+    </g>
+  </g>
+  <text x="74" y="560" class="display" font-size="38" fill="var(--arkiv)">Bevisa<tspan fill="var(--sigill)">.</tspan></text>
+  <text x="76" y="594" class="mono" font-size="13" fill="var(--arkiv)" opacity=".45">BUILT IN STOCKHOLM</text>
+</svg>

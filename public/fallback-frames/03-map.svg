@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style>:root{--ink:#101B2D;--arkiv:#F2F4F1;--sigill:#1E7A5F;--expiry:#C8891A;--saknas:#B23A31;--graphite:#5A6472}.m{font-family:monospace;letter-spacing:2px}</style>
+  <rect width="800" height="500" fill="var(--ink)"/><g stroke="var(--graphite)" opacity=".6"><path d="M120 120L310 80L510 150L680 76M120 120L230 280L470 310L680 76M230 280L118 410L420 420L650 360M510 150L470 310L650 360"/></g>
+  <g fill="var(--sigill)"><circle cx="120" cy="120" r="9"/><circle cx="310" cy="80" r="7"/><circle cx="230" cy="280" r="10"/><circle cx="470" cy="310" r="9"/><circle cx="118" cy="410" r="7"/><circle cx="420" cy="420" r="9"/></g><circle cx="510" cy="150" r="9" fill="var(--expiry)"/><circle cx="680" cy="76" r="9" fill="var(--saknas)"/><circle cx="650" cy="360" r="8" fill="var(--sigill)"/>
+  <text x="34" y="52" class="m" font-size="14" fill="var(--sigill)">03 · LINEAGE VERIFIED</text><text x="34" y="470" class="m" font-size="12" fill="var(--arkiv)" opacity=".45">UNMATCHED REQUIREMENTS STAY HOLLOW</text>
+</svg>
