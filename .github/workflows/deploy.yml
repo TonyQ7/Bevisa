@@ -39,6 +39,9 @@ jobs:
       - name: Run deterministic quality gate
         run: npm run check
 
+      - name: Run Lighthouse budgets
+        run: npm run lighthouse
+
       - name: Install browser engines
         run: npx playwright install --with-deps chromium firefox webkit
 
@@ -47,9 +50,6 @@ jobs:
 
       - name: Run isolated frame-pacing gates
         run: npm run test:e2e -- --workers=1 --grep "frame rates|frame pacing"
-
-      - name: Run Lighthouse budgets
-        run: npm run lighthouse
 
       - name: Configure GitHub Pages
         if: github.event_name != 'pull_request'
