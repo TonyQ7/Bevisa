@@ -1,6 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
-  <style>:root{--ink:#101B2D;--arkiv:#F2F4F1;--sigill:#1E7A5F;--graphite:#5A6472}.m{font-family:monospace;letter-spacing:2px}</style>
-  <rect width="800" height="500" fill="var(--ink)"/><rect x="112" y="86" width="576" height="326" fill="none" stroke="var(--graphite)"/><rect x="146" y="120" width="210" height="28" fill="var(--sigill)" opacity=".2"/><text x="158" y="139" class="m" font-size="11" fill="var(--sigill)">OWNER: QUALITY LEAD</text>
-  <g fill="var(--arkiv)" opacity=".75"><rect x="146" y="190" width="470" height="9"/><rect x="146" y="218" width="390" height="9"/><rect x="146" y="266" width="440" height="9"/><rect x="146" y="294" width="320" height="9"/></g><g fill="var(--sigill)"><rect x="630" y="183" width="40" height="24"/><rect x="550" y="211" width="40" height="24"/><rect x="600" y="259" width="40" height="24"/></g>
-  <text x="34" y="52" class="m" font-size="14" fill="var(--sigill)">04 · CITED DRAFT</text><text x="34" y="470" class="m" font-size="12" fill="var(--arkiv)" opacity=".45">NO SOURCE · NO CLAIM</text>
+  <style>:root{--ink:#101B2D;--ink-raised:#17263B;--arkiv:#F2F4F1;--sigill:#82C9B2;--line:#AEB8C5}.m{font-family:monospace;letter-spacing:2px}</style>
+  <rect width="800" height="500" fill="var(--ink)"/>
+  <g opacity=".1" stroke="var(--arkiv)"><path d="M0 100H800M0 200H800M0 300H800M0 400H800"/><path d="M100 0V500M200 0V500M300 0V500M400 0V500M500 0V500M600 0V500M700 0V500"/></g>
+  <rect x="104" y="76" width="592" height="346" fill="var(--ink-raised)" stroke="var(--line)" stroke-width="1.5"/>
+  <rect x="138" y="108" width="238" height="32" fill="var(--sigill)" opacity=".22"/>
+  <text x="150" y="129" class="m" font-size="12" fill="var(--sigill)">OWNER: QUALITY LEAD</text>
+  <g fill="var(--arkiv)" opacity=".8"><rect x="138" y="182" width="420" height="11"/><rect x="138" y="212" width="352" height="11"/><rect x="138" y="264" width="396" height="11"/><rect x="138" y="294" width="290" height="11"/><rect x="138" y="346" width="368" height="11"/></g>
+  <g fill="var(--sigill)"><rect x="572" y="175" width="60" height="26"/><rect x="504" y="205" width="60" height="26"/><rect x="548" y="257" width="60" height="26"/><rect x="520" y="339" width="60" height="26"/></g>
+  <g class="m" font-size="11" fill="var(--ink)"><text x="580" y="193">E-014</text><text x="510" y="223">CV-028</text><text x="556" y="275">E-031</text><text x="527" y="357">REF-09</text></g>
+  <text x="34" y="52" class="m" font-size="15" fill="var(--sigill)">04 · CITED DRAFT</text>
+  <text x="34" y="470" class="m" font-size="12" fill="var(--arkiv)" opacity=".45">NO SOURCE · NO CLAIM</text>
 </svg>

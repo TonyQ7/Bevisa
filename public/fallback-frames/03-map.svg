@@ -1,6 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
-  <style>:root{--ink:#101B2D;--arkiv:#F2F4F1;--sigill:#1E7A5F;--expiry:#C8891A;--saknas:#B23A31;--graphite:#5A6472}.m{font-family:monospace;letter-spacing:2px}</style>
-  <rect width="800" height="500" fill="var(--ink)"/><g stroke="var(--graphite)" opacity=".6"><path d="M120 120L310 80L510 150L680 76M120 120L230 280L470 310L680 76M230 280L118 410L420 420L650 360M510 150L470 310L650 360"/></g>
-  <g fill="var(--sigill)"><circle cx="120" cy="120" r="9"/><circle cx="310" cy="80" r="7"/><circle cx="230" cy="280" r="10"/><circle cx="470" cy="310" r="9"/><circle cx="118" cy="410" r="7"/><circle cx="420" cy="420" r="9"/></g><circle cx="510" cy="150" r="9" fill="var(--expiry)"/><circle cx="680" cy="76" r="9" fill="var(--saknas)"/><circle cx="650" cy="360" r="8" fill="var(--sigill)"/>
-  <text x="34" y="52" class="m" font-size="14" fill="var(--sigill)">03 · LINEAGE VERIFIED</text><text x="34" y="470" class="m" font-size="12" fill="var(--arkiv)" opacity=".45">UNMATCHED REQUIREMENTS STAY HOLLOW</text>
+  <style>:root{--ink:#101B2D;--arkiv:#F2F4F1;--sigill:#82C9B2;--expiry:#E8B45A;--saknas:#E27770;--line:#AEB8C5}.m{font-family:monospace;letter-spacing:2px}</style>
+  <rect width="800" height="500" fill="var(--ink)"/>
+  <g opacity=".1" stroke="var(--arkiv)"><path d="M0 100H800M0 200H800M0 300H800M0 400H800"/><path d="M100 0V500M200 0V500M300 0V500M400 0V500M500 0V500M600 0V500M700 0V500"/></g>
+  <g stroke="var(--line)" opacity=".5" fill="none"><path d="M140 130L320 90L520 160L670 86M140 130L250 290L480 320L670 86M250 290L138 410L430 424L650 360M520 160L480 320L650 360"/></g>
+  <g fill="var(--sigill)"><rect x="126" y="116" width="28" height="28"/><rect x="308" y="78" width="24" height="24"/><rect x="236" y="276" width="28" height="28"/><rect x="466" y="306" width="28" height="28"/><rect x="126" y="398" width="24" height="24"/><rect x="416" y="410" width="28" height="28"/><rect x="638" y="354" width="24" height="24"/></g>
+  <rect x="506" y="146" width="28" height="28" fill="var(--expiry)"/>
+  <rect x="656" y="72" width="28" height="28" fill="none" stroke="var(--saknas)" stroke-width="2.5"/>
+  <text x="560" y="150" class="m" font-size="12" fill="var(--expiry)">EV-064</text>
+  <text x="620" y="60" class="m" font-size="12" fill="var(--saknas)">SAKNAS</text>
+  <text x="34" y="52" class="m" font-size="15" fill="var(--sigill)">03 · LINEAGE VERIFIED</text>
+  <text x="34" y="470" class="m" font-size="12" fill="var(--arkiv)" opacity=".45">UNMATCHED REQUIREMENTS STAY HOLLOW</text>
 </svg>

@@ -16,7 +16,7 @@ export function Offer(): JSX.Element {
   }
 
   return (
-    <section id="offer" className="paper-section px-[var(--page-gutter)] py-[var(--space-section)]" aria-labelledby="offer-title">
+    <section id="offer" className="paper-section px-[var(--page-gutter)] py-[var(--space-section-compact)]" aria-labelledby="offer-title">
       <div className="mx-auto w-full max-w-[86rem] bg-ink px-5 py-8 text-arkiv sm:px-10 sm:py-12 lg:px-16 lg:py-16">
         <div className="grid gap-14 lg:grid-cols-[1fr_0.82fr] lg:gap-20">
           <div>
@@ -77,7 +77,19 @@ export function Offer(): JSX.Element {
           </div>
         </div>
 
-        <p className="mt-12 border-t border-white/15 pt-5 text-xs leading-relaxed text-arkiv/55">{copy.offer.legal}</p>
+        <div className="mt-12 border-t border-white/15 pt-6">
+          <p className="mono text-[0.68rem] tracking-[0.1em] text-arkiv/55">{copy.offer.pilotTitle}</p>
+          <ol className="mt-4 grid gap-2 sm:grid-cols-3">
+            {copy.offer.pilotStages.map((stage, index) => (
+              <li className="flex items-center gap-3 border border-white/15 bg-[var(--ink-raised)] px-4 py-3.5" key={stage}>
+                <span className="mono text-[0.62rem] text-[var(--sigill-light)]">{`0${index + 1}`}</span>
+                <span className="text-sm text-arkiv/80">{stage}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        <p className="mt-10 border-t border-white/15 pt-5 text-xs leading-relaxed text-arkiv/55">{copy.offer.legal}</p>
       </div>
     </section>
   )

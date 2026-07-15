@@ -3,11 +3,16 @@ import { useLayoutEffect, useMemo, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { EVIDENCE_RECORDS, type EvidenceRecord, type EvidenceStatus } from '../content/evidence'
 
+// Lighter status variants keep 3:1 contrast against the ink hero surface.
 const tokenName: Record<EvidenceStatus, string> = {
-  approved: '--sigill',
-  expiring: '--expiry',
-  missing: '--saknas',
+  approved: '--sigill-light',
+  expiring: '--expiry-light',
+  missing: '--saknas-light',
 }
+
+// Push the field into the right half of the desktop composition; the hero
+// shade protects headline contrast on the left.
+const FIELD_OFFSET_X = 3.1
 
 function cssColor(token: string): THREE.Color {
   const value = getComputedStyle(document.documentElement).getPropertyValue(token).trim()
@@ -31,7 +36,7 @@ function Lineage(): JSX.Element {
       <bufferGeometry>
         <bufferAttribute attach="attributes-position" args={[positions, 3]} />
       </bufferGeometry>
-      <lineBasicMaterial color={cssColor('--graphite')} transparent opacity={0.2} depthWrite={false} />
+      <lineBasicMaterial color={cssColor('--ink-muted')} transparent opacity={0.3} depthWrite={false} />
     </lineSegments>
   )
 }
@@ -47,6 +52,8 @@ export function EvidenceField({ onHoverRecord }: { onHoverRecord: (record: Evide
     if (!mesh) return
     EVIDENCE_RECORDS.forEach((record, index) => mesh.setColorAt(index, cssColor(tokenName[record.status])))
     if (mesh.instanceColor) mesh.instanceColor.needsUpdate = true
+    // The instanceColor attribute is created after the material may have compiled.
+    if (!Array.isArray(mesh.material)) mesh.material.needsUpdate = true
   }, [])
 
   useFrame(({ clock }) => {
@@ -54,7 +61,7 @@ export function EvidenceField({ onHoverRecord }: { onHoverRecord: (record: Evide
     if (!mesh || document.hidden) return
 
     const elapsed = clock.getElapsedTime()
-    const cursorX = pointer.x * 7.5
+    const cursorX = pointer.x * 7.5 - FIELD_OFFSET_X
     const cursorY = pointer.y * 4.5
 
     // Mutating one instance buffer keeps the 90-node field out of React's render loop.
@@ -71,7 +78,8 @@ export function EvidenceField({ onHoverRecord }: { onHoverRecord: (record: Evide
         baseZ,
       )
       dummy.quaternion.copy(camera.quaternion)
-      const scale = (index === hovered ? 1.8 : 1) * Math.max(0.55, 1 - Math.abs(baseZ) * 0.035)
+      // Steeper depth falloff separates foreground records from the archive behind them.
+      const scale = (index === hovered ? 1.7 : 1) * Math.max(0.42, 1 - Math.abs(baseZ) * 0.055)
       dummy.scale.setScalar(scale)
       dummy.updateMatrix()
       mesh.setMatrixAt(index, dummy.matrix)
@@ -80,7 +88,7 @@ export function EvidenceField({ onHoverRecord }: { onHoverRecord: (record: Evide
   })
 
   return (
-    <group>
+    <group position={[FIELD_OFFSET_X, 0, 0]}>
       <Lineage />
       <instancedMesh
         ref={meshRef}
@@ -99,8 +107,8 @@ export function EvidenceField({ onHoverRecord }: { onHoverRecord: (record: Evide
           onHoverRecord(null)
         }}
       >
-        <planeGeometry args={[0.09, 0.09]} />
-        <meshBasicMaterial vertexColors transparent opacity={0.92} toneMapped={false} />
+        <planeGeometry args={[0.16, 0.16]} />
+        <meshBasicMaterial transparent opacity={0.95} toneMapped={false} />
       </instancedMesh>
     </group>
   )

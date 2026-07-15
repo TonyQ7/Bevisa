@@ -179,6 +179,43 @@ test('maintains mobile frame pacing with static scene fallbacks', async ({ page 
   expect(mobileFps).toBeGreaterThanOrEqual(30)
 })
 
+test('expands and collapses mobile evidence records with the keyboard', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'mobile-chromium', 'The mobile project owns the compact evidence list')
+  await page.clock.setFixedTime(new Date('2026-07-15T08:00:00Z'))
+  await page.goto('./#health')
+  const rows = page.locator('#health ul > li')
+  await expect(rows).toHaveCount(6)
+  const showAll = page.getByRole('button', { name: 'Show all' })
+  await showAll.focus()
+  await page.keyboard.press('Enter')
+  await expect(rows).toHaveCount(12)
+  // Filtering keeps operating on the complete record set, not the visible slice.
+  await page.getByRole('button', { name: 'Next 90 days' }).click()
+  await expect(rows).toHaveCount(3)
+  await page.getByRole('button', { name: 'All evidence' }).click()
+  await expect(rows).toHaveCount(12)
+  const showLess = page.getByRole('button', { name: 'Show less' })
+  await showLess.focus()
+  await page.keyboard.press('Enter')
+  await expect(rows).toHaveCount(6)
+})
+
+test('keeps keyboard focus visibly outlined', async ({ page }) => {
+  await page.goto('./')
+  await page.keyboard.press('Tab')
+  // WebKit tabs past links by platform convention, so assert the ring on
+  // whichever interactive control keyboard focus lands on first.
+  const focusRing = await page.evaluate(() => {
+    const element = document.activeElement
+    if (!(element instanceof HTMLElement) || element === document.body) return null
+    const style = getComputedStyle(element)
+    return { tag: element.tagName, outline: style.outlineStyle, width: Number.parseFloat(style.outlineWidth) }
+  })
+  expect(['A', 'BUTTON']).toContain(focusRing?.tag)
+  expect(focusRing?.outline).toBe('solid')
+  expect(focusRing?.width ?? 0).toBeGreaterThan(0)
+})
+
 test('provides the complete English content without JavaScript', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false })
   const page = await context.newPage()

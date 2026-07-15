@@ -15,9 +15,27 @@ const HeroCanvas = lazy(async () => {
 function StaticHeroFrame(): JSX.Element {
   return (
     <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-      <img className="h-full w-full object-cover opacity-70" src="./fallback-frames/03-map.svg" alt="" />
+      <img className="h-full w-full object-cover opacity-80" src="./fallback-frames/00-hero.svg" alt="" />
       <div className="hero-shade absolute inset-0" />
     </div>
+  )
+}
+
+const LEGEND_TOKENS = ['--sigill-light', '--expiry-light', '--saknas-light'] as const
+
+function EvidenceLegend(): JSX.Element {
+  const { copy } = useLocale()
+  const labels = [copy.common.status.approved, copy.common.status.expiring, copy.common.status.missing]
+
+  return (
+    <ul className="mono absolute bottom-6 right-[var(--page-gutter)] z-10 flex list-none items-center gap-4 p-0 text-[0.62rem] tracking-[0.1em] text-arkiv/70">
+      {labels.map((label, index) => (
+        <li className="flex items-center gap-1.5" key={label}>
+          <span className="block size-2" style={{ background: `var(${LEGEND_TOKENS[index]})` }} aria-hidden="true" />
+          <span className="uppercase">{label}</span>
+        </li>
+      ))}
+    </ul>
   )
 }
 
@@ -63,8 +81,10 @@ export function Hero(): JSX.Element {
         </Suspense>
       )}
 
+      <EvidenceLegend />
+
       {!useStatic && hoveredRecord ? (
-        <div className="mono pointer-events-none absolute bottom-20 right-[var(--page-gutter)] z-20 w-max max-w-64 border border-white/20 bg-ink/95 px-3 py-2 text-[10px] leading-relaxed text-arkiv shadow-2xl backdrop-blur">
+        <div className="mono pointer-events-none absolute bottom-16 right-[var(--page-gutter)] z-20 w-max max-w-64 border border-white/20 bg-ink/95 px-3 py-2 text-[10px] leading-relaxed text-arkiv shadow-2xl backdrop-blur">
           <span className="block text-white">{hoveredRecord.label}</span>
           <span className="text-arkiv/55">{hoveredRecord.id} · {hoveredRecord.expiresAt ?? hoveredRecord.status}</span>
           <span className="block text-arkiv/55">{hoveredRecord.owner}</span>

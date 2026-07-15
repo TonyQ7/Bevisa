@@ -19,7 +19,15 @@
   --ink-line: color-mix(in srgb, var(--arkiv) 18%, transparent);
   --focus: #2d9c78;
   --sigill-light: #82c9b2;
+  --ink-raised: #17263b;
+  --ink-raised-rgb: 23 38 59;
+  --paper-raised: #fbfcfa;
+  --expiry-light: #e8b45a;
+  --saknas-light: #e27770;
+  --paper-line-strong: color-mix(in srgb, var(--graphite) 42%, transparent);
+  --ink-line-strong: color-mix(in srgb, var(--arkiv) 32%, transparent);
   --space-section: clamp(5rem, 11vw, 10rem);
+  --space-section-compact: clamp(3.75rem, 7vw, 6.5rem);
   --page-gutter: clamp(1.1rem, 4vw, 4.5rem);
   --max-content: 86rem;
   --radius-sm: 0.25rem;

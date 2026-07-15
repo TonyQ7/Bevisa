@@ -69,6 +69,10 @@ a {
   padding: var(--space-section) var(--page-gutter);
 }
 
+.section-shell-compact {
+  padding-block: var(--space-section-compact);
+}
+
 .section-inner {
   width: min(100%, var(--max-content));
   margin-inline: auto;
@@ -174,6 +178,34 @@ a {
 
 .ink-section .hairline {
   border-color: var(--ink-line);
+}
+
+.hairline-strong {
+  border-color: var(--paper-line-strong);
+}
+
+.ink-section .hairline-strong {
+  border-color: var(--ink-line-strong);
+}
+
+/* The sourced figure is always present; motion only unclips it. */
+.stat-reveal {
+  display: inline-block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .stat-reveal {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0.15;
+    transition:
+      clip-path 900ms var(--ease-institutional),
+      opacity 900ms var(--ease-institutional);
+  }
+
+  .stat-reveal.is-in {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
 }
 
 .button-base {

@@ -26,6 +26,14 @@ export interface StatCopy {
   sourceUrl: string
 }
 
+export interface ProblemFragment {
+  id: 'expired' | 'reference' | 'unmapped'
+  tag: string
+  title: string
+  note: string
+  status: 'expiring' | 'missing'
+}
+
 export interface PipelineBeat {
   id: 'ingest' | 'extract' | 'map' | 'draft' | 'approve'
   number: string
@@ -47,6 +55,7 @@ export interface LocalizedCopy {
     languageLabel: string
     english: string
     swedish: string
+    status: { approved: string; expiring: string; missing: string }
   }
   nav: {
     label: string
@@ -74,6 +83,7 @@ export interface LocalizedCopy {
     title: string
     body: string
     stats: readonly StatCopy[]
+    fragments: readonly ProblemFragment[]
     context: string
     contextQualifier: string
   }
@@ -91,6 +101,7 @@ export interface LocalizedCopy {
     citationTwo: string
     approval: string
     export: string
+    hud: { phase: string; status: string; evidence: string; approval: string }
   }
   health: {
     eyebrow: string
@@ -101,6 +112,8 @@ export interface LocalizedCopy {
     columns: { evidence: string; owner: string; status: string }
     scoreLabel: string
     digest: string
+    showAll: string
+    showLess: string
   }
   sovereignty: {
     eyebrow: string
@@ -109,6 +122,8 @@ export interface LocalizedCopy {
     commitment: string
     badges: readonly string[]
     sourceLabel: string
+    custodyTitle: string
+    custody: readonly string[]
   }
   stack: {
     eyebrow: string
@@ -127,6 +142,8 @@ export interface LocalizedCopy {
     title: string
     body: string
     terms: readonly string[]
+    pilotTitle: string
+    pilotStages: readonly string[]
     qualifiersTitle: string
     qualifiers: readonly string[]
     book: string
@@ -163,6 +180,7 @@ export const EN_COPY: LocalizedCopy = {
     languageLabel: 'Language',
     english: 'English',
     swedish: 'Svenska',
+    status: { approved: 'Approved', expiring: 'Expiring', missing: 'Missing' },
   },
   nav: {
     label: 'Primary navigation',
@@ -214,6 +232,11 @@ export const EN_COPY: LocalizedCopy = {
         sourceLabel: 'Upphandlingsmyndigheten, 2025 supplier survey',
         sourceUrl: SOURCES.supplierSurvey2025,
       },
+    ],
+    fragments: [
+      { id: 'expired', tag: 'CERT-041', title: 'ISO 9001 certificate', note: 'Expired last Tuesday', status: 'expiring' },
+      { id: 'reference', tag: 'REF-017', title: 'Municipal service reference', note: 'Only one colleague can find it', status: 'missing' },
+      { id: 'unmapped', tag: 'KRAV-112', title: 'Mandatory requirement', note: 'Never mapped to evidence', status: 'missing' },
     ],
     context:
       'Advertised Swedish procurement carried an estimated value of SEK 982 billion in 2025.',
@@ -271,6 +294,7 @@ export const EN_COPY: LocalizedCopy = {
     citationTwo: 'CV-028',
     approval: 'GODKÄND — human approval required for every submission',
     export: 'EXPORT · WORD / PORTAL',
+    hud: { phase: 'Phase', status: 'Status', evidence: 'Evidence', approval: 'Approval' },
   },
   health: {
     eyebrow: 'EVIDENCE HEALTH',
@@ -282,6 +306,8 @@ export const EN_COPY: LocalizedCopy = {
     columns: { evidence: 'Evidence', owner: 'Owner', status: 'Renewal horizon' },
     scoreLabel: 'Evidence health score',
     digest: 'Monday digest · 3 actions assigned',
+    showAll: 'Show all',
+    showLess: 'Show less',
   },
   sovereignty: {
     eyebrow: 'DIGITAL SOVEREIGNTY',
@@ -292,6 +318,8 @@ export const EN_COPY: LocalizedCopy = {
       'That architecture follows the direction of Sweden’s 2026 cloud policy: stronger control over data, lower dependency and practical exit paths.',
     badges: ['EU/EEA HOSTING', 'GDPR BY DESIGN', 'FULL AUDIT TRAIL'],
     sourceLabel: 'Sweden’s 2026 cloud policy',
+    custodyTitle: 'Custody path — every stage a design-partner commitment',
+    custody: ['Approved evidence', 'EU/EEA boundary', 'Role-based access', 'Retention & audit trail', 'Human decision'],
   },
   stack: {
     eyebrow: 'WORKS WITH YOUR STACK',
@@ -318,6 +346,8 @@ export const EN_COPY: LocalizedCopy = {
       'Fully credited to year-one SaaS',
       'Traceability promised — never wins',
     ],
+    pilotTitle: 'Eight weeks, three stages',
+    pilotStages: ['Baseline & setup', 'Live shadow workflow', 'Evidence review & decision'],
     qualifiersTitle: 'A strong fit looks like',
     qualifiers: [
       '8+ public bids per year',

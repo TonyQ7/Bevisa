@@ -39,11 +39,13 @@ function contentPlugin(): Plugin {
       const notFound = EN_COPY.notFound
       writeFileSync(
         resolve(output, '404.css'),
-        ':root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:#101B2D;color:#F2F4F1;font-family:system-ui,sans-serif}.shell{width:min(42rem,calc(100% - 2rem));padding:3rem;border:1px solid #5A6472}.eyebrow{font:500 .75rem/1.4 monospace;letter-spacing:.12em;color:#82c9b2}h1{font-size:clamp(2.5rem,8vw,5rem);line-height:.95;margin:1rem 0}p{color:#c6ccd4;line-height:1.6}a{display:inline-block;margin-top:1rem;padding:.8rem 1rem;background:#1E7A5F;color:white;text-decoration:none}a:focus-visible{outline:2px solid white;outline-offset:4px}',
+        ':root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:#101B2D;color:#F2F4F1;font-family:system-ui,sans-serif}.shell{width:min(42rem,calc(100% - 2rem));padding:3rem;border:1px solid #5A6472}.eyebrow{font:500 .75rem/1.4 monospace;letter-spacing:.12em;color:#82c9b2}.motif{display:block;margin-bottom:1.5rem}h1{font-size:clamp(2.5rem,8vw,5rem);line-height:.95;margin:1rem 0}p{color:#c6ccd4;line-height:1.6}a{display:inline-block;margin-top:1rem;padding:.8rem 1rem;background:#1E7A5F;color:white;text-decoration:none}a:focus-visible{outline:2px solid white;outline-offset:4px}',
       )
+      const motif =
+        '<svg class="motif" width="76" height="76" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#F2F4F1" stroke-width="3.5"><rect x="12" y="12" width="17" height="17"/><rect x="35" y="12" width="17" height="17"/><rect x="12" y="35" width="17" height="17"/></g><rect x="35" y="35" width="17" height="17" fill="none" stroke="#E27770" stroke-width="3.5"/></svg>'
       writeFileSync(
         resolve(output, '404.html'),
-        `<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; base-uri 'self'; object-src 'none'"><link rel="stylesheet" href="./404.css"><title>${escapeHtml(notFound.title)} · Bevisa</title></head><body><main class="shell"><p class="eyebrow">${escapeHtml(notFound.eyebrow)}</p><h1>${escapeHtml(notFound.title)}</h1><p>${escapeHtml(notFound.body)}</p><a href="./">${escapeHtml(notFound.home)}</a></main></body></html>`,
+        `<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; base-uri 'self'; object-src 'none'"><link rel="stylesheet" href="./404.css"><title>${escapeHtml(notFound.title)} · Bevisa</title></head><body><main class="shell">${motif}<p class="eyebrow">${escapeHtml(notFound.eyebrow)}</p><h1>${escapeHtml(notFound.title)}</h1><p>${escapeHtml(notFound.body)}</p><a href="./">${escapeHtml(notFound.home)}</a></main></body></html>`,
       )
     },
   }

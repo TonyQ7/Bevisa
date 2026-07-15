@@ -5,7 +5,7 @@ export function Footer(): JSX.Element {
   const { copy } = useLocale()
 
   return (
-    <footer className="bg-arkiv px-[var(--page-gutter)] pb-10 text-ink">
+    <footer className="bg-arkiv px-[var(--page-gutter)] pb-8 text-ink">
       <div className="mx-auto grid w-full max-w-[86rem] gap-8 border-t hairline pt-8 md:grid-cols-[0.7fr_1.3fr]">
         <div>
           <p className="font-display text-xl font-bold">{copy.footer.tagline}</p>

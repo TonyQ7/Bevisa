@@ -4,7 +4,10 @@ export default defineConfig({
   testDir: './e2e',
   timeout: 45_000,
   expect: { timeout: 8_000 },
-  fullyParallel: true,
+  // Frame-pacing assertions must run without competing browser workers; under
+  // parallel load they measure the test runner, not the experience under test.
+  fullyParallel: false,
+  workers: 1,
   forbidOnly: Boolean(process.env.CI),
   retries: process.env.CI ? 1 : 0,
   reporter: [['list'], ['html', { open: 'never' }]],
@@ -28,9 +31,28 @@ export default defineConfig({
     },
   ],
   projects: [
-    { name: 'chromium', use: { ...devices['Desktop Chrome'], viewport: { width: 1440, height: 900 } } },
-    { name: 'firefox', use: { ...devices['Desktop Firefox'], viewport: { width: 1440, height: 900 } } },
-    { name: 'webkit', use: { ...devices['Desktop Safari'], viewport: { width: 1440, height: 900 } } },
-    { name: 'mobile-chromium', use: { ...devices['Pixel 7'], viewport: { width: 390, height: 844 } } },
+    { name: 'chromium', testIgnore: /visual\.spec\.ts/, use: { ...devices['Desktop Chrome'], viewport: { width: 1440, height: 900 } } },
+    { name: 'firefox', testIgnore: /visual\.spec\.ts/, use: { ...devices['Desktop Firefox'], viewport: { width: 1440, height: 900 } } },
+    { name: 'webkit', testIgnore: /visual\.spec\.ts/, use: { ...devices['Desktop Safari'], viewport: { width: 1440, height: 900 } } },
+    { name: 'mobile-chromium', testIgnore: /visual\.spec\.ts/, use: { ...devices['Pixel 7'], viewport: { width: 390, height: 844 } } },
+    {
+      // Grayscale text AA and software raster keep section baselines byte-stable
+      // regardless of GPU-process state under parallel workers.
+      name: 'visual',
+      testMatch: /visual\.spec\.ts/,
+      use: {
+        ...devices['Desktop Chrome'],
+        viewport: { width: 1440, height: 900 },
+        launchOptions: {
+          args: [
+            '--disable-lcd-text',
+            '--disable-font-subpixel-positioning',
+            '--disable-gpu',
+            '--force-color-profile=srgb',
+            '--force-device-scale-factor=1',
+          ],
+        },
+      },
+    },
   ],
 })

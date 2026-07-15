@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style>:root{--ink:#101B2D;--arkiv:#F2F4F1;--sigill:#82C9B2;--expiry:#E8B45A;--saknas:#E27770;--line:#AEB8C5}.m{font-family:monospace;letter-spacing:2px}</style>
+  <rect width="800" height="500" fill="var(--ink)"/>
+  <g opacity=".1" stroke="var(--arkiv)"><path d="M0 100H800M0 200H800M0 300H800M0 400H800"/><path d="M100 0V500M200 0V500M300 0V500M400 0V500M500 0V500M600 0V500M700 0V500"/></g>
+  <g stroke="var(--line)" opacity=".38" fill="none"><path d="M470 130L590 90L700 170M470 130L410 260L560 300L700 170M410 260L330 390L560 430L688 350M560 300L688 350M590 90L560 300"/></g>
+  <g fill="var(--sigill)"><rect x="458" y="118" width="24" height="24"/><rect x="578" y="78" width="22" height="22"/><rect x="398" y="248" width="26" height="26"/><rect x="548" y="288" width="24" height="24"/><rect x="318" y="378" width="22" height="22"/><rect x="548" y="418" width="24" height="24"/></g>
+  <rect x="688" y="158" width="24" height="24" fill="var(--expiry)"/>
+  <rect x="676" y="338" width="24" height="24" fill="var(--saknas)"/>
+  <g fill="var(--sigill)" opacity=".55"><rect x="250" y="170" width="14" height="14"/><rect x="640" y="250" width="14" height="14"/><rect x="350" y="90" width="14" height="14"/><rect x="450" y="430" width="14" height="14"/></g>
+</svg>

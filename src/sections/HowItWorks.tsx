@@ -99,7 +99,7 @@ export function HowItWorks(): JSX.Element {
           <div
             ref={stageRef}
             data-testid="pipeline-stage"
-            className="mt-12 grid min-h-[100svh] items-center gap-8 lg:grid-cols-[0.34fr_0.66fr]"
+            className="mt-12 grid min-h-[100svh] items-center gap-8 lg:grid-cols-[0.3fr_0.7fr]"
           >
             <div className="relative z-10 py-16">
               <ol className="border-y border-white/15">
@@ -126,7 +126,22 @@ export function HowItWorks(): JSX.Element {
               </div>
             </div>
 
-            <div className="relative h-[72svh] min-h-[34rem] overflow-hidden border border-white/10 bg-ink/40">
+            <div className="relative h-[74svh] min-h-[34rem] overflow-hidden border border-white/15 bg-[var(--ink-raised)]">
+              <div className="mono absolute inset-x-0 top-0 z-10 grid grid-cols-2 gap-px border-b border-white/10 bg-white/10 text-[0.6rem] tracking-[0.08em] sm:grid-cols-4">
+                {[
+                  [copy.pipeline.hud.phase, `${active?.number ?? ''} · ${active?.title ?? ''}`],
+                  [copy.pipeline.hud.status, active?.signal ?? ''],
+                  [copy.pipeline.hud.evidence, `${copy.pipeline.citationOne} / ${copy.pipeline.citationTwo}`],
+                  [copy.pipeline.hud.approval, activeStep === 4 ? 'GODKÄND' : '—'],
+                ].map(([label, value]) => (
+                  <div className="bg-[var(--ink-raised)] px-3 py-2" key={label}>
+                    <span className="block text-arkiv/50">{label}</span>
+                    <span className={`mt-0.5 block truncate ${activeStep === 4 && label === copy.pipeline.hud.approval ? 'text-[var(--sigill-light)]' : 'text-arkiv/85'}`}>
+                      {value}
+                    </span>
+                  </div>
+                ))}
+              </div>
               <Suspense fallback={null}>
                 <PipelineCanvas progressRef={progressRef} active={visible} />
               </Suspense>

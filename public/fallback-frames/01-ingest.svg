@@ -1,6 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
-  <style>:root{--ink:#101B2D;--arkiv:#F2F4F1;--sigill:#1E7A5F;--graphite:#5A6472}.m{font-family:monospace;letter-spacing:2px}</style>
-  <rect width="800" height="500" fill="var(--ink)"/><g opacity=".15" stroke="var(--arkiv)"><path d="M0 100H800M0 200H800M0 300H800M0 400H800"/><path d="M100 0V500M200 0V500M300 0V500M400 0V500M500 0V500M600 0V500M700 0V500"/></g>
-  <g transform="translate(270 58)"><rect width="260" height="350" fill="none" stroke="var(--arkiv)" stroke-width="2"/><path d="M35 65H225M35 96H188M35 145H225M35 176H204M35 225H225M35 256H170" stroke="var(--graphite)" stroke-width="8"/><rect x="35" y="296" width="92" height="20" fill="var(--sigill)"/></g>
-  <text x="34" y="52" class="m" font-size="14" fill="var(--sigill)">01 · FFU RECEIVED</text><text x="34" y="470" class="m" font-size="12" fill="var(--arkiv)" opacity=".45">ORIGINAL SOURCE LOCKED</text>
+  <style>:root{--ink:#101B2D;--ink-raised:#17263B;--arkiv:#F2F4F1;--sigill:#82C9B2;--line:#AEB8C5}.m{font-family:monospace;letter-spacing:2px}</style>
+  <rect width="800" height="500" fill="var(--ink)"/>
+  <g opacity=".1" stroke="var(--arkiv)"><path d="M0 100H800M0 200H800M0 300H800M0 400H800"/><path d="M100 0V500M200 0V500M300 0V500M400 0V500M500 0V500M600 0V500M700 0V500"/></g>
+  <g transform="translate(250 52)">
+    <rect width="300" height="392" fill="var(--ink-raised)" stroke="var(--arkiv)" stroke-width="2.5"/>
+    <path d="M40 70H260M40 104H216M40 160H260M40 194H236M40 250H260M40 284H196" stroke="var(--line)" stroke-width="10" opacity=".7"/>
+    <rect x="40" y="330" width="116" height="26" fill="var(--sigill)"/>
+    <text x="52" y="348" class="m" font-size="12" fill="var(--ink)">KÄLLA LÅST</text>
+  </g>
+  <text x="34" y="52" class="m" font-size="15" fill="var(--sigill)">01 · FFU RECEIVED</text>
+  <text x="34" y="470" class="m" font-size="12" fill="var(--arkiv)" opacity=".45">ORIGINAL SOURCE LOCKED</text>
 </svg>

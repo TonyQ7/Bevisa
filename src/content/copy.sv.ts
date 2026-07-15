@@ -22,6 +22,7 @@ export const SV_COPY: LocalizedCopy = {
     languageLabel: 'Språk',
     english: 'English',
     swedish: 'Svenska',
+    status: { approved: 'Godkänd', expiring: 'Utgår', missing: 'Saknas' },
   },
   nav: {
     label: 'Huvudnavigering',
@@ -73,6 +74,11 @@ export const SV_COPY: LocalizedCopy = {
         sourceLabel: 'Upphandlingsmyndigheten, leverantörsenkät 2025',
         sourceUrl: SOURCES.supplierSurvey2025,
       },
+    ],
+    fragments: [
+      { id: 'expired', tag: 'CERT-041', title: 'ISO 9001-certifikat', note: 'Gick ut förra tisdagen', status: 'expiring' },
+      { id: 'reference', tag: 'REF-017', title: 'Kommunal servicereferens', note: 'Bara en kollega hittar den', status: 'missing' },
+      { id: 'unmapped', tag: 'KRAV-112', title: 'Obligatoriskt krav', note: 'Aldrig kopplat till evidens', status: 'missing' },
     ],
     context:
       'Svenska annonserade upphandlingar hade ett uppskattat värde på 982 miljarder kronor 2025.',
@@ -130,6 +136,7 @@ export const SV_COPY: LocalizedCopy = {
     citationTwo: 'CV-028',
     approval: 'GODKÄND — mänskligt godkännande krävs för varje inlämning',
     export: 'EXPORT · WORD / PORTAL',
+    hud: { phase: 'Fas', status: 'Status', evidence: 'Evidens', approval: 'Godkännande' },
   },
   health: {
     eyebrow: 'EVIDENSHÄLSA',
@@ -141,6 +148,8 @@ export const SV_COPY: LocalizedCopy = {
     columns: { evidence: 'Evidens', owner: 'Ägare', status: 'Förnyelsehorisont' },
     scoreLabel: 'Evidenshälsa',
     digest: 'Måndagsöversikt · 3 åtgärder tilldelade',
+    showAll: 'Visa alla',
+    showLess: 'Visa färre',
   },
   sovereignty: {
     eyebrow: 'DIGITAL SUVERÄNITET',
@@ -151,6 +160,8 @@ export const SV_COPY: LocalizedCopy = {
       'Arkitekturen följer riktningen i Sveriges molnpolicy 2026: starkare kontroll över data, lägre beroende och praktiska exitvägar.',
     badges: ['EU/EES-HOSTING', 'GDPR BY DESIGN', 'FULLSTÄNDIGT REVISIONSSPÅR'],
     sourceLabel: 'Sveriges molnpolicy 2026',
+    custodyTitle: 'Förvarskedja — varje steg ett designpartneråtagande',
+    custody: ['Godkänd evidens', 'EU/EES-gräns', 'Rollbaserad åtkomst', 'Gallring & revisionsspår', 'Mänskligt beslut'],
   },
   stack: {
     eyebrow: 'FUNGERAR MED ER STACK',
@@ -177,6 +188,8 @@ export const SV_COPY: LocalizedCopy = {
       'Tillgodoräknas fullt mot år ett',
       'Spårbarhet utlovas — aldrig vinster',
     ],
+    pilotTitle: 'Åtta veckor, tre steg',
+    pilotStages: ['Basmätning & uppsättning', 'Live skuggarbetsflöde', 'Evidensgranskning & beslut'],
     qualifiersTitle: 'En stark matchning ser ut så här',
     qualifiers: [
       '8+ offentliga anbud per år',

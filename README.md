@@ -18,7 +18,7 @@ The repository contains only the static launch site. It has no backend, form sub
 - GSAP ScrollTrigger drives one normalized pipeline progress value. Lenis is loaded after first paint.
 - Framer Motion provides evidence-radar layout transitions.
 - Fontsource assets are self-hosted. Heavy narrative and 3D code is lazy-loaded.
-- Five generated SVG pipeline frames cover mobile, reduced motion, missing WebGL, lost WebGL, and no-JavaScript paths.
+- Six generated SVG frames (hero evidence field plus five pipeline stages) cover mobile, reduced motion, missing WebGL, lost WebGL, and no-JavaScript paths.
 - All copy, sources, locale shapes, evidence records, and launch configuration are typed.
 
 ## How to run and test on Windows
@@ -56,17 +56,18 @@ When values are absent or invalid, hero and nav actions scroll to the design-par
 
 ## Verified quality snapshot
 
-Local production verification on 14 July 2026:
+Local production verification on 15 July 2026:
 
 | Gate | Result |
 | --- | --- |
-| Production JavaScript | 365.4 KB gzip / 450 KB budget |
+| Production JavaScript | 367.2 KB gzip / 450 KB budget |
 | Unit tests | 13 passing |
-| Browser suite | 40 passing, 12 intentional project-specific skips across Chromium, Firefox, WebKit, and 390 px mobile |
+| Browser suite | 52 passing, 15 intentional project-specific skips across Chromium, Firefox, WebKit, 390 px mobile, and the dedicated visual-baseline project |
+| Visual regression | 42 deterministic section-level baselines at 390×844, 768×1024, and 1440×900 in both locales (local Windows workstation; skipped on CI) |
 | Automated accessibility | 100 Lighthouse; zero axe violations |
-| Mobile Lighthouse | 98 performance, 100 accessibility, 100 SEO; 2.11 s LCP |
+| Mobile Lighthouse | 98 performance, 100 accessibility, 100 SEO; 2.10 s LCP |
 | Desktop Lighthouse | 100 performance, 100 accessibility, 100 SEO; 0.46 s LCP |
-| Animation pacing | 58.6 fps desktop hero, 60.0 fps forward/reverse pipeline, and 60.0 fps mobile fallback |
+| Animation pacing | 60.0 fps desktop hero, forward and reverse pipeline, and 60.0 fps mobile fallback |
 
 The workflow reruns every required gate on Node.js 22 before publishing `dist` to GitHub Pages. Official actions are pinned to full commit SHAs.
 

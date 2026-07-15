@@ -1,5 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
-  <style>:root{--ink:#101B2D;--arkiv:#F2F4F1;--sigill:#1E7A5F;--expiry:#C8891A;--saknas:#B23A31;--graphite:#5A6472}.m{font-family:monospace;letter-spacing:2px}</style>
-  <rect width="800" height="500" fill="var(--ink)"/><g transform="translate(115 92)"><g fill="none" stroke="var(--graphite)"><rect width="570" height="285"/><path d="M0 57H570M0 114H570M0 171H570M0 228H570M95 0V285M190 0V285M285 0V285M380 0V285M475 0V285"/></g><g fill="var(--sigill)" opacity=".8"><rect x="8" y="8" width="79" height="41"/><rect x="103" y="8" width="79" height="41"/><rect x="198" y="65" width="79" height="41"/><rect x="293" y="122" width="79" height="41"/><rect x="388" y="179" width="79" height="41"/><rect x="483" y="236" width="79" height="41"/></g><rect x="293" y="8" width="79" height="41" fill="var(--expiry)"/><rect x="103" y="179" width="79" height="41" fill="var(--saknas)"/></g><path d="M90 330H710" stroke="var(--arkiv)" stroke-width="3"/><rect x="280" y="352" width="240" height="46" fill="var(--sigill)"/><text x="400" y="381" text-anchor="middle" class="m" font-size="14" fill="var(--arkiv)">GODKÄND</text>
-  <text x="34" y="52" class="m" font-size="14" fill="var(--sigill)">05 · HUMAN GATE</text><text x="34" y="470" class="m" font-size="12" fill="var(--arkiv)" opacity=".45">APPROVE BEFORE EXPORT</text>
+  <style>:root{--ink:#101B2D;--arkiv:#F2F4F1;--sigill:#82C9B2;--expiry:#E8B45A;--saknas:#E27770;--line:#AEB8C5}.m{font-family:monospace;letter-spacing:2px}</style>
+  <rect width="800" height="500" fill="var(--ink)"/>
+  <g opacity=".1" stroke="var(--arkiv)"><path d="M0 100H800M0 200H800M0 300H800M0 400H800"/><path d="M100 0V500M200 0V500M300 0V500M400 0V500M500 0V500M600 0V500M700 0V500"/></g>
+  <g transform="translate(103 78)">
+    <g fill="none" stroke="var(--line)" stroke-width="1.5"><rect width="594" height="248"/><path d="M0 62H594M0 124H594M0 186H594M99 0V248M198 0V248M297 0V248M396 0V248M495 0V248"/></g>
+    <g fill="var(--sigill)" opacity=".9"><rect x="10" y="10" width="79" height="42"/><rect x="109" y="10" width="79" height="42"/><rect x="208" y="72" width="79" height="42"/><rect x="307" y="134" width="79" height="42"/><rect x="406" y="196" width="79" height="42"/><rect x="505" y="196" width="79" height="42"/><rect x="406" y="10" width="79" height="42"/><rect x="10" y="134" width="79" height="42"/></g>
+    <rect x="307" y="10" width="79" height="42" fill="var(--expiry)"/>
+    <rect x="109" y="196" width="79" height="42" fill="none" stroke="var(--saknas)" stroke-width="2.5"/>
+  </g>
+  <path d="M90 350H710" stroke="var(--arkiv)" stroke-width="3.5"/>
+  <rect x="270" y="376" width="260" height="52" fill="var(--sigill)"/>
+  <text x="400" y="409" text-anchor="middle" class="m" font-size="16" fill="var(--ink)">GODKÄND</text>
+  <text x="34" y="52" class="m" font-size="15" fill="var(--sigill)">05 · HUMAN GATE</text>
+  <text x="34" y="470" class="m" font-size="12" fill="var(--arkiv)" opacity=".45">APPROVE BEFORE EXPORT</text>
 </svg>
